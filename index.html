@@ -90,6 +90,30 @@
     letter-spacing:-0.01em;
   }
 
+  .btn-primary{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:16px 18px;
+    background:var(--ink);
+    color:#fff;
+    border:none;
+    border-radius:980px;
+    font-family:inherit;
+    font-weight:600;
+    font-size:16px;
+    letter-spacing:-0.01em;
+    text-decoration:none;
+    cursor:pointer;
+    margin-bottom:16px;
+    transition:opacity .15s ease, transform .15s ease;
+  }
+  .btn-primary:hover{ opacity:0.88; }
+  .btn-primary:active{ transform:scale(0.98); }
+  .btn-primary:focus-visible{ outline:2px solid #0071e3; outline-offset:2px; }
+
   .social-row{
     display:flex;
     justify-content:center;
@@ -136,6 +160,10 @@
     <div id="qrcode"></div>
     <div class="qr-caption">Scan to save my contact</div>
   </div>
+
+  <a class="btn-primary" href="https://jordanxeldridge.pixieset.com/charmcity/" target="_blank" rel="noopener">
+    View photos from Charm City
+  </a>
 
   <div class="social-row">
     <a class="social-btn" href="https://x.com/jordanxeldridge" target="_blank" rel="noopener" aria-label="X">
