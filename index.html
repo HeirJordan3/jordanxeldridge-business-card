@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#fbfbfd">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jordan Eldridge — JXE</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,142 +17,87 @@
     --line:#d2d2d7;
     --fill:#f5f5f7;
     --fill-hover:#e8e8ed;
-    --pad-x: clamp(20px, 5.5vw, 36px);
-    --pad-y: clamp(28px, 6vw, 44px);
-    --qr-size: clamp(120px, 38vw, 148px);
-    --touch: 44px;
   }
   *{box-sizing:border-box;}
-  html{
-    margin:0;
-    padding:0;
-    -webkit-text-size-adjust:100%;
-    text-size-adjust:100%;
-  }
+  html,body{margin:0;padding:0;}
   body{
-    margin:0;
     min-height:100vh;
-    min-height:100dvh;
     background:var(--bg);
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:
-      max(16px, env(safe-area-inset-top, 0px))
-      max(16px, env(safe-area-inset-right, 0px))
-      max(16px, env(safe-area-inset-bottom, 0px))
-      max(16px, env(safe-area-inset-left, 0px));
+    padding:40px 16px;
     font-family:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text',system-ui,sans-serif;
     -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
   }
 
   .card{
     width:100%;
-    max-width:min(400px, 100%);
+    max-width:380px;
     background:var(--card);
-    border-radius:clamp(20px, 5vw, 28px);
-    padding:var(--pad-y) var(--pad-x) clamp(24px, 5vw, 36px);
+    border-radius:28px;
+    padding:44px 36px 36px;
     box-shadow:0 1px 2px rgba(0,0,0,0.04), 0 24px 48px -20px rgba(0,0,0,0.12);
   }
 
   .logo{
     display:block;
-    height:clamp(28px, 8vw, 34px);
+    height:34px;
     width:auto;
-    max-width:min(160px, 55vw);
-    object-fit:contain;
-    margin:0 auto clamp(20px, 5vw, 30px);
+    margin:0 auto 30px;
   }
 
   .name-block{
     text-align:center;
-    margin-bottom:clamp(22px, 5vw, 34px);
+    margin-bottom:34px;
   }
   .name-block h1{
     margin:0;
-    font-size:clamp(22px, 6.2vw, 26px);
+    font-size:26px;
     font-weight:700;
     letter-spacing:-0.02em;
     color:var(--ink);
-    line-height:1.15;
-    overflow-wrap:anywhere;
   }
   .name-block .role{
     margin-top:6px;
-    font-size:clamp(14px, 3.8vw, 15px);
+    font-size:15px;
     font-weight:500;
     color:var(--gray);
     letter-spacing:-0.01em;
-    line-height:1.35;
   }
 
   .qr-card{
     background:var(--fill);
-    border-radius:clamp(16px, 4vw, 20px);
-    padding:clamp(16px, 4vw, 22px);
+    border-radius:20px;
+    padding:22px;
     display:flex;
     flex-direction:column;
     align-items:center;
-    margin-bottom:clamp(18px, 4.5vw, 28px);
+    margin-bottom:28px;
   }
   #qrcode{
     background:#fff;
-    padding:clamp(8px, 2.5vw, 12px);
+    padding:12px;
     border-radius:14px;
     line-height:0;
   }
-  #qrcode img,
-  #qrcode canvas{
-    display:block;
-    border-radius:4px;
-    width:var(--qr-size) !important;
-    height:var(--qr-size) !important;
-    max-width:100%;
-  }
+  #qrcode img{ display:block; border-radius:4px; }
   .qr-caption{
-    margin-top:clamp(10px, 3vw, 14px);
-    font-size:clamp(12px, 3.4vw, 13px);
+    margin-top:14px;
+    font-size:13px;
     font-weight:500;
     color:var(--gray);
     letter-spacing:-0.01em;
-    text-align:center;
   }
-
-  .btn-primary{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    width:100%;
-    min-height:var(--touch);
-    padding:14px 18px;
-    background:var(--ink);
-    color:#fff;
-    border:none;
-    border-radius:980px;
-    font-family:inherit;
-    font-weight:600;
-    font-size:clamp(15px, 4vw, 16px);
-    letter-spacing:-0.01em;
-    cursor:pointer;
-    margin-bottom:16px;
-    -webkit-tap-highlight-color:transparent;
-    touch-action:manipulation;
-    transition:opacity .15s ease, transform .15s ease;
-  }
-  .btn-primary:hover{ opacity:0.88; }
-  .btn-primary:active{ transform:scale(0.98); }
-  .btn-primary:focus-visible{ outline:2px solid #0071e3; outline-offset:2px; }
 
   .social-row{
     display:flex;
     justify-content:center;
-    gap:clamp(10px, 3vw, 14px);
+    gap:12px;
   }
   .social-btn{
-    width:var(--touch);
-    height:var(--touch);
+    width:42px;
+    height:42px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -161,93 +105,21 @@
     background:var(--fill);
     color:var(--ink);
     text-decoration:none;
-    -webkit-tap-highlight-color:transparent;
-    touch-action:manipulation;
     transition:background .15s ease, transform .15s ease;
   }
   .social-btn:hover{ background:var(--fill-hover); }
   .social-btn:active{ transform:scale(0.94); }
   .social-btn:focus-visible{ outline:2px solid #0071e3; outline-offset:2px; }
-  .social-btn svg{ width:18px; height:18px; flex-shrink:0; }
+  .social-btn svg{ width:18px; height:18px; }
 
   .foot-note{
-    margin-top:clamp(18px, 4.5vw, 26px);
+    margin-top:26px;
     text-align:center;
-    font-size:clamp(12px, 3.3vw, 12.5px);
+    font-size:12.5px;
     color:var(--gray-2);
     letter-spacing:-0.01em;
-    line-height:1.4;
-    padding-inline:4px;
   }
 
-  .toast{
-    position:fixed;
-    z-index:50;
-    bottom:max(24px, env(safe-area-inset-bottom, 0px));
-    left:50%;
-    transform:translateX(-50%) translateY(20px);
-    background:var(--ink);
-    color:#fff;
-    padding:11px 20px;
-    border-radius:980px;
-    font-size:13px;
-    font-weight:500;
-    opacity:0;
-    pointer-events:none;
-    transition:opacity .25s ease, transform .25s ease;
-    max-width:min(90vw, 320px);
-    text-align:center;
-    box-sizing:border-box;
-  }
-  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
-
-  /* Narrow phones */
-  @media (max-width:360px){
-    :root{
-      --pad-x:18px;
-      --pad-y:24px;
-      --qr-size:112px;
-    }
-  }
-
-  /* Tablets and up — keep card centered, slightly roomier */
-  @media (min-width:768px){
-    :root{
-      --pad-x:40px;
-      --pad-y:48px;
-      --qr-size:160px;
-    }
-    body{ padding:48px 24px; }
-    .card{ max-width:420px; }
-    .logo{ height:36px; max-width:180px; }
-    .name-block h1{ font-size:28px; }
-  }
-
-  /* Short landscape phones / foldables */
-  @media (max-height:520px) and (orientation:landscape){
-    body{
-      align-items:flex-start;
-      padding-block:max(12px, env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-bottom, 0px));
-    }
-    .card{
-      max-width:min(440px, 92vw);
-      padding:20px 24px 18px;
-    }
-    .logo{ margin-bottom:14px; height:28px; }
-    .name-block{ margin-bottom:14px; }
-    .qr-card{
-      margin-bottom:14px;
-      padding:12px;
-    }
-    :root{ --qr-size:96px; }
-    .foot-note{ margin-top:12px; }
-  }
-
-  @media (prefers-reduced-motion:reduce){
-    .btn-primary,
-    .social-btn,
-    .toast{ transition:none; }
-  }
 </style>
 </head>
 <body>
@@ -265,11 +137,6 @@
     <div class="qr-caption">Scan to save my contact</div>
   </div>
 
-  <button class="btn-primary" id="saveContact" type="button">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
-    Add to Contacts
-  </button>
-
   <div class="social-row">
     <a class="social-btn" href="https://x.com/jordanxeldridge" target="_blank" rel="noopener" aria-label="X">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.1l-5.5-7.2L4.4 22H1.3l8.1-9.3L1 2h7.3l5 6.6L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg>
@@ -285,42 +152,16 @@
   <div class="foot-note">Scan the code, save the contact, reach out anytime.</div>
 </div>
 
-<div class="toast" id="toast"></div>
-
 <script>
   const VCARD = "BEGIN:VCARD\nVERSION:3.0\nN:Eldridge;Jordan;;;\nFN:Jordan Eldridge\nORG:JXE Photography\nTITLE:Sports & Event Photographer\nTEL;TYPE=CELL:+13023125754\nEMAIL:jordanxeldridgephoto@gmail.com\nURL:https://www.instagram.com/jordanxeldridge/\nEND:VCARD";
 
-  const qrHost = document.getElementById("qrcode");
-  const qrCssSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--qr-size")) || 148;
-  const qrPx = Math.max(112, Math.round(qrCssSize * (window.devicePixelRatio > 1.5 ? 2 : 1.25)));
-
-  new QRCode(qrHost, {
+  new QRCode(document.getElementById("qrcode"), {
     text: VCARD,
-    width: qrPx,
-    height: qrPx,
+    width: 148,
+    height: 148,
     colorDark: "#1d1d1f",
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.M
-  });
-
-  function showToast(msg){
-    const t = document.getElementById("toast");
-    t.textContent = msg;
-    t.classList.add("show");
-    setTimeout(()=> t.classList.remove("show"), 2600);
-  }
-
-  document.getElementById("saveContact").addEventListener("click", function(){
-    const blob = new Blob([VCARD], { type: "text/vcard" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "jordan-eldridge-jxe.vcf";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    showToast("Contact card downloaded");
   });
 </script>
 
